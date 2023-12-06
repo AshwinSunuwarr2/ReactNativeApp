@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ViewPhoto from './newComponent/viewphotocompo'
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -16,11 +17,17 @@ const HomeScreen = ({ navigation }) => {
 const AboutScreen = ({ navigation }) => {
   return (
     <View>
-      <Text>
-        This is About page.
-      </Text>
-      <Button title="Home Page" onPress={() => { navigation.navigate('Home') }} />
-      <Button title="Contact Page" onPress={() => { navigation.navigate('Contact') }} />
+      <View>
+        <Text>
+          This is About page.
+        </Text>
+        <Button title="Home Page" onPress={() => { navigation.navigate('Home') }} />
+        <Button title="Contact Page" onPress={() => { navigation.navigate('Contact') }} />
+      </View>
+      <View>
+        <ViewPhoto />
+        <Text>poto</Text>
+      </View>
     </View>
   )
 }
