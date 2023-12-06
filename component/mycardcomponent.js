@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         height: 550,
         margin: 10,
-        marginTop: 25,
+        marginTop: 35,
         borderColor: "#d6d5d2"
     },
     userDP: {
