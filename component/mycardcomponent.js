@@ -1,5 +1,6 @@
 import { Text, View, Image, StyleSheet, FlatList, ActivityIndicator } from "react-native"
 import React, { useEffect, useState } from "react"
+import { TouchableOpacity } from "react-native";
 // import { StatusBar } from "expo-status-bar"
 
 export default function MyCard() {
@@ -41,7 +42,9 @@ export default function MyCard() {
                             <Image source={{ uri: item.userprofilepic }} style={styles.userDPImage} />
                             <Text style={styles.userDPName}>{item.username}</Text>
                         </View>
-                        <Image style={styles.userPost} source={{ uri: item.userpost }} />
+                        <TouchableOpacity>
+                            <Image style={styles.userPost} source={{ uri: item.userpost }} />
+                        </TouchableOpacity>
 
                         <View style={{ width: '100%', height: 55, backgroundColor: 'white', flex: 0, flexDirection: 'row', alignItems: "center", padding: 10 }}>
                             <Image source={require("../assets/image/heart.png")} style={styles.heartIcon} />
